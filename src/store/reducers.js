@@ -62,7 +62,7 @@ export const INITIAL_STATE = {
   },
 
   email: null,
-  units: 'in',
+  units: 'cm',
   firstName: null,
   phoneNumber: null,
   notes: null,
