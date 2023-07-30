@@ -278,7 +278,9 @@ class Welcome extends Component {
               </picture>
               <div className="screen__intro">
                 <h4 className="screen__intro-title">
-                  体型を測定して、自分だけのオーダーメイド枕を作ろう
+                  体型を測定して、自分だけの
+                  <br />
+                  オーダーメイド枕を作ろう
                 </h4>
                 <p className="screen__intro-txt">
                   メジャー等は不要、わずか1分ほどでまくら作成に必要な測定を行います。
