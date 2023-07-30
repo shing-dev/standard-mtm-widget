@@ -51,15 +51,15 @@ class Gender extends Component {
 
     return (
       <div className={classNames('gender', className, { 'gender--invalid': !isValid })}>
-        <label className={classNames('gender__item', { checked: value === 'female' })} htmlFor="gender-female">
-          <input type="radio" name="gender" id="gender-female" value="female" onChange={this.onGenderChange} checked={value === 'female'} />
-          <span>Female</span>
-        </label>
-
         <label className={classNames('gender__item', { checked: value === 'male' })} htmlFor="gender-male">
           <input type="radio" name="gender" id="gender-male" value="male" onChange={this.onGenderChange} checked={value === 'male'} />
-          <span>Male</span>
+          <span>男性</span>
         </label>
+        <label className={classNames('gender__item', { checked: value === 'female' })} htmlFor="gender-female">
+          <input type="radio" name="gender" id="gender-female" value="female" onChange={this.onGenderChange} checked={value === 'female'} />
+          <span>女性</span>
+        </label>
+
       </div>
     );
   }

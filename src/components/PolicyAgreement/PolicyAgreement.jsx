@@ -68,24 +68,24 @@ const PolicyAgreement = ({
           checked={agree}
         />
         <span className="checkbox__icon" />
-        { 'I accept ' }
         <button
           type="button"
           className="PolicyAgreement__link"
           onMouseDown={onClickTermsOrPrivacy('terms')}
           onClick={() => openWindow('terms')}
         >
-          Terms of Use
+          利用規約
         </button>
-        { ' and ' }
+        { ' / ' }
         <button
           type="button"
           className="PolicyAgreement__link"
           onMouseDown={onClickTermsOrPrivacy('privacy')}
           onClick={() => openWindow('privacy')}
         >
-          Privacy Policy
+          プライバシーポリシー
         </button>
+        に同意する
       </label>
     </div>
   );

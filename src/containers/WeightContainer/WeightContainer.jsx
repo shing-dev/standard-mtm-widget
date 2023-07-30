@@ -317,14 +317,14 @@ class WeightContainer extends Component {
           <Stepper steps="9" current="4" />
 
           <div className="weight-container__control screen__control">
-            <h3 className="screen__label">What’s your weight?</h3>
+            <h3 className="screen__label">体重</h3>
             <div className="weight-container__input-wrap">
               {isMobile ? (
                 <div className="weight-container__input-wrap">
                   <input
                     className="input"
                     type="text"
-                    placeholder="Select"
+                    placeholder="選択"
                     value={weightValue}
                     disabled
                   />
@@ -366,23 +366,22 @@ class WeightContainer extends Component {
                     })}
                   >
                     {units === 'cm'
-                      ? 'Your weight should be between 30-200 KG'
+                      ? '30-200 kgの間から選択してください'
                       : 'Your weight should be between 66 and 441 LB'}
                   </p>
                 </div>
               )}
             </div>
             <p className="weight-container__txt">
-              We use weight data, so your measurements will be more accurate,
-              but if you want you can
+              測定の正確性を高めるために体重データを使用しますが、
               <button
                 className="weight-container__skip-btn"
                 type="button"
                 onClick={this.skipAndNextHandler}
               >
-                skip
+                スキップ
               </button>
-              this step.
+              することも可能です.
             </p>
           </div>
         </div>

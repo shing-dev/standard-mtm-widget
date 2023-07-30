@@ -423,12 +423,11 @@ class QRCodeContainer extends Component {
           {!isPending ? <Stepper steps="5" current="2" /> : null}
 
           <h3 className="screen__title scan-qrcode__title">
-            SCAN THIS QR CODE
+            QRコードをスキャン
           </h3>
-          <p>and proceed on your mobile device</p>
 
           <div className="scan-qrcode__help-btn">
-            <Link href="/qrcode-help">How to use QR code</Link>
+            <Link href="/qrcode-help">QRコードの使い方</Link>
           </div>
 
           <div
@@ -442,7 +441,7 @@ class QRCodeContainer extends Component {
           </div>
 
           <button className={classNames('scan-qrcode__btn', { 'scan-qrcode__btn--copied': isCopied })} disabled={isShortUrlFetching} type="button" data-clipboard-text={qrCopyUrl} onClick={this.copyUrl}>
-            {(!isCopied) ? 'Copy link' : 'Link copied'}
+            {(!isCopied) ? 'リンクをコピー' : 'リンクをコピーしました'}
             <svg width="11px" height="14px" viewBox="0 0 11 14" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g className="qrcode__btn-svg" transform="translate(-325.000000, -341.000000)" stroke="#396EC5" strokeWidth="1.3">
@@ -456,13 +455,14 @@ class QRCodeContainer extends Component {
           </button>
 
           <h3 className="screen__title scan-qrcode__title-2">
-            or enter your mobile number
+            電話番号を入力
           </h3>
 
           <div className="screen__control scan-qrcode__control">
             <IntlTelInput
               containerClassName="intl-tel-input"
-              defaultCountry={phoneCountry || ''}
+              onlyCountries={phoneCountry ? [phoneCountry, 'jp'] : ['jp']}
+              defaultCountry={phoneCountry || 'jp'}
               defaultValue={phoneUserPart || ''}
               inputClassName={classNames('input', 'scan-qrcode__phone', {
                 'input--invalid': !isPhoneNumberValid,
@@ -479,7 +479,7 @@ class QRCodeContainer extends Component {
               Invalid phone number
             </p>
 
-            <p>and get a link via text message</p>
+            <p>メッセージに測定URLをお送りします。</p>
           </div>
         </div>
         <div className="screen__footer">
@@ -499,9 +499,9 @@ class QRCodeContainer extends Component {
           >
             <img className="spin" src={smsSendingIcon} alt="sms sending" />
 
-            {isSMSPending ? 'SENDING' : null}
-            {isSMSSuccess ? `Try again in ${resendTime}` : null}
-            {!isSMSSuccess && !isSMSPending ? 'Send' : null}
+            {isSMSPending ? '送信中' : null}
+            {isSMSSuccess ? `${resendTime}秒後にリトライ` : null}
+            {!isSMSSuccess && !isSMSPending ? '送信する' : null}
           </button>
         </div>
 

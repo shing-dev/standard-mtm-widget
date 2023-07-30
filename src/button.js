@@ -66,7 +66,7 @@ class SaiaMTMButton {
       ...globalOptions,
       defaultValues: {
         email: null,
-        heightCm: null,
+        heightCm: 160,
         heightFt: null,
         heightIn: null,
         weight: null,

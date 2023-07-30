@@ -2,6 +2,7 @@ dist/
 node_modules/
 coverage/
 saia-config.development.js
+saia-config.production.js
 docs/
 designs/
 .idea/

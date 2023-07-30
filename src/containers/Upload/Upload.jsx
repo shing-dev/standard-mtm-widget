@@ -184,7 +184,7 @@ class Upload extends Component {
     }
 
     if (!isTableFlow
-        && ((!prevProps.sideImage && sideImage) || (!prevProps.frontImage && frontImage))) {
+      && ((!prevProps.sideImage && sideImage) || (!prevProps.frontImage && frontImage))) {
       const event = (!prevProps.sideImage && sideImage && SIDE_PHOTO_PAGE_EXAMPLE_CLOSE)
         || (!prevProps.frontImage && frontImage && FRONT_PHOTO_PAGE_EXAMPLE_CLOSE);
 
@@ -843,10 +843,10 @@ class Upload extends Component {
       frontActive = (!frontImage && !sideImage) || (!frontImage && sideImage);
       sideActive = frontImage && !sideImage;
     } else if ((!frontImage && !sideImage) || (!frontImage && sideImage)) {
-      title = 'Take Front photo';
+      title = '正面の写真を撮る';
       frontActive = true;
     } else if (frontImage && !sideImage) {
-      title = 'Take Side photo';
+      title = '側面の写真を撮る';
       sideActive = true;
     }
 
@@ -909,7 +909,7 @@ class Upload extends Component {
                 onClick={this.triggerFrontImage}
                 type="button"
               >
-                撮影を開始する
+                開始する
               </button>
 
               <button
@@ -919,7 +919,7 @@ class Upload extends Component {
                 onClick={this.triggerSideImage}
                 type="button"
               >
-                撮影を開始する
+                開始する
               </button>
             </div>
           </Fragment>

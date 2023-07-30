@@ -66,7 +66,7 @@ export const INITIAL_STATE = {
   firstName: null,
   phoneNumber: null,
   notes: null,
-  phoneCountry: null,
+  phoneCountry: 'JP',
   phoneUserPart: null,
   fakeSize: false,
 

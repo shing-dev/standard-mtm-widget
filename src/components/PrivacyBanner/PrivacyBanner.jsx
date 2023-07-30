@@ -27,9 +27,7 @@ export default function PrivacyBanner() {
         </svg>
       </figure>
       <p className="privacy-banner__txt">
-        Your privacy is at the center of what we do. Your photos
-        <b> will be deleted immediately </b>
-        after they are processed!
+        プライバシーを保護するため、<b>アップロードされた写真は計測後すぐに削除されます。</b>
       </p>
     </div>
   );
