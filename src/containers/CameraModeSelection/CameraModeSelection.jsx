@@ -147,24 +147,22 @@ class CameraModeSelection extends Component {
             <div className="screen__content camera-mode-selection">
               <Stepper steps="9" current="5" />
 
-              <h3 className="screen__title">LET&apos;S TAKE 2 PHOTOS</h3>
+              <h3 className="screen__title">2枚の写真を撮りましょう</h3>
 
               <PrivacyBanner />
 
               <p className="camera-mode-selection__text">
-                You have two options: ask someone to help you, or
+                友人や家族に撮ってもらう、または
                 {' '}
                 <br />
                 {' '}
-                take
-                photos by yourself in the hands-free mode
+                ボイスアシスタントを使って自分で撮る、
                 {' '}
                 <br />
                 {' '}
-                using a voice
-                assistant.
+                のどちらかでお撮りください。
                 <br />
-                <b> How would you like to proceed? </b>
+                <b> どちらの方法で写真を撮りますか？ </b>
               </p>
 
               <div className="camera-mode-selection__buttons-wrap">
@@ -201,7 +199,7 @@ class CameraModeSelection extends Component {
                   </div>
                   <div className="camera-mode-selection__icon-wrap">
                     <h4 className="camera-mode-selection__title">
-                      With a friend
+                      撮ってもらう
                     </h4>
                   </div>
                 </label>
@@ -240,7 +238,7 @@ class CameraModeSelection extends Component {
                   </div>
                   <div className="camera-mode-selection__icon-wrap">
                     <h4 className="camera-mode-selection__title">
-                      Hands-free
+                      自分で撮る
                     </h4>
                   </div>
                 </label>
@@ -252,7 +250,7 @@ class CameraModeSelection extends Component {
                 href="/how-to-take-photos"
                 onClick={this.onClickNextStep}
               >
-                NEXT
+                次へ
               </Link>
             </div>
           </Fragment>

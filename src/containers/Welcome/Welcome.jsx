@@ -292,7 +292,7 @@ class Welcome extends Component {
                   src={loader}
                   alt="loader"
                 />
-                <span>next</span>
+                <span>次へ</span>
               </button>
             </div>
           </section>

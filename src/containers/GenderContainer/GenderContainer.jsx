@@ -190,7 +190,7 @@ class GenderContainer extends Component {
               changeAgreeState={this.changeAgree}
             />
           ) : null}
-          <button className="button" onClick={this.next} type="button" disabled={buttonDisabled}>Next</button>
+          <button className="button" onClick={this.next} type="button" disabled={buttonDisabled}>次へ</button>
         </div>
       </section>
     );

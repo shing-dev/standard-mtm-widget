@@ -34,7 +34,7 @@ export default class Height extends Component {
     this.maxHeightCm = 220;
 
     this.state = {
-      units: 'in',
+      units: 'cm',
       cm: null,
       ft: null,
       inches: null,
@@ -323,34 +323,9 @@ export default class Height extends Component {
         </div>
 
         <p className={classNames('screen__control-error', 'height__desc', { active: !isValid })}>
-          {(units === 'cm' && !isValid) ? 'Your height should be between 150-220 cm' : null}
+          {(units === 'cm' && !isValid) ? '100-250 cm の間で入力してください' : null}
           {(units === 'in' && !isValid) ? 'Your height should be between 4’11” and 7’2”' : null}
         </p>
-
-        <div className={classNames('height__switcher', { 'height__switcher--cm': units === 'cm', 'height__switcher--in': units === 'in' })}>
-          <label className={classNames('height__switcher-item', 'height__switcher-item--cm', { checked: units === 'cm' })} htmlFor="measure-cm" tabIndex="-1">
-            <input type="radio" name="measure" id="measure-cm" value="cm" onChange={this.onUnitsChange} checked={units === 'cm'} />
-            <div className="height__switcher-info">
-              <p>Metric system</p>
-              <p>CM/KG</p>
-            </div>
-          </label>
-
-          <label className={classNames('height__switcher-item', 'height__switcher-item--in', { checked: units === 'in' })} htmlFor="measure-in" tabIndex="-1">
-            <input type="radio" name="measure" id="measure-in" value="in" onChange={this.onUnitsChange} checked={units === 'in'} />
-            <div className="height__switcher-info">
-              <p>Imperial system</p>
-              <p>IN/LB</p>
-            </div>
-          </label>
-
-          <button className="height__switcher-switch" onClick={this.onSwitchClick} type="button">
-            <span>
-              { 'Change units to ' }
-              {(units === 'in') ? 'centimeters' : 'feets and inches'}
-            </span>
-          </button>
-        </div>
       </div>
     );
   }

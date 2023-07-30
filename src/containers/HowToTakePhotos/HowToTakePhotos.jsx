@@ -36,9 +36,10 @@ class HowToTakePhotos extends Component {
     super(props);
 
     this.state = {
-      videoText: props.isTableFlow
-        ? 'Stand your device upright on a table. \n You can use an object to help hold it up.'
-        : 'Ask someone to help take 2 photos of you. \n Keep the device at 90° angle at the waistline.',
+      // videoText: props.isTableFlow
+      //   ? 'Stand your device upright on a table. \n You can use an object to help hold it up.'
+      //   : 'Ask someone to help take 2 photos of you. \n Keep the device at 90° angle at the waistline.',
+      videoText: props.isTableFlow ? 'スマートフォンをテーブルに立てかけてください。 \n 何かで支えても構いません。' : '2枚の写真を撮ってもらってください。 \n スマートフォンは腰の高さで90°に保ってください。',
       isVideoLoaded: false,
     };
 
@@ -145,19 +146,23 @@ class HowToTakePhotos extends Component {
   setTableFlowVideoText = (time) => {
     if (time < 3.8) {
       this.setState({
-        videoText: 'Stand your device upright on a table. \n You can use an object to help hold it up.',
+        // videoText: 'Stand your device upright on a table. \n You can use an object to help hold it up.',
+        videoText: 'スマートフォンをテーブルに立てかけてください。 \n 何かで支えても構いません。',
       });
     } else if (time > 3.8 && time < 7) {
       this.setState({
-        videoText: 'Angle the phone so that the arrows line up on the green',
+        // videoText: 'Angle the phone so that the arrows line up on the green',
+        videoText: 'スマートフォンの角度を調整し、矢印が緑色の線に重なるようにしてください。',
       });
     } else if (time > 7 && time < 13.5) {
       this.setState({
-        videoText: 'Take 3 to 4 steps away from your device.',
+        // videoText: 'Take 3 to 4 steps away from your device.',
+        videoText: 'スマートフォンから3,4歩下がってください。',
       });
     } else if (time > 13.5) {
       this.setState({
-        videoText: 'Please turn up the volume and follow the voice instructions.',
+        // videoText: 'Please turn up the volume and follow the voice instructions.',
+        videoText: '音量を上げて、音声の指示に従ってください。',
       });
     }
   }
@@ -165,11 +170,13 @@ class HowToTakePhotos extends Component {
   setFriendFlowVideoText = (time) => {
     if (time < 3) {
       this.setState({
-        videoText: 'Ask someone to help take 2 photos of you. \n Keep the device at 90° angle at the waistline.',
+        // videoText: 'Ask someone to help take 2 photos of you. \n Keep the device at 90° angle at the waistline.',
+        videoText: '2枚の写真を撮ってもらってください。 \n スマートフォンは腰の高さで90°の角度を保ってください。',
       });
     } else if (time > 3) {
       this.setState({
-        videoText: 'For the side photo turn to your left.',
+        // videoText: 'For the side photo turn to your left.',
+        videoText: '横向きの写真を取る際は、左を向いてください。',
       });
     }
   }
@@ -198,7 +205,7 @@ class HowToTakePhotos extends Component {
 
         <div className="screen__content how-to-take-photos">
           <div className="how-to-take-photos__content">
-            <h3 className="screen__title">how to take photos</h3>
+            <h3 className="screen__title">写真の取り方</h3>
 
             {!isVideoLoaded ? <Loader /> : null}
 
@@ -233,7 +240,7 @@ class HowToTakePhotos extends Component {
                 type="button"
               >
                 <i>&#8635;</i>
-                <span>Replay</span>
+                <span>再生</span>
               </button>
             </div>
           </div>

@@ -130,7 +130,7 @@ class HeightContainer extends Component {
     const numHeight = parseInt(height, 10);
     let isValueValid = false;
 
-    if (numHeight >= 150 && numHeight <= 220) {
+    if (numHeight >= 100 && numHeight <= 250) {
       isValueValid = true;
     }
 
@@ -186,7 +186,7 @@ class HeightContainer extends Component {
           <Stepper steps="9" current={3} />
 
           <div className="height-container__control screen__control">
-            <h3 className="screen__label">How tall are you?</h3>
+            <h3 className="screen__label">身長</h3>
             <Height
               className="height__height"
               change={this.changeHeight}
@@ -211,7 +211,7 @@ class HeightContainer extends Component {
             />
           ) : null }
 
-          <button className="button" onClick={this.onNextScreen} type="button" disabled={buttonDisabled}>Next</button>
+          <button className="button" onClick={this.onNextScreen} type="button" disabled={buttonDisabled}>次へ</button>
         </div>
       </div>
     );

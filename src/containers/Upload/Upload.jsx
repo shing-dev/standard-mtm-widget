@@ -909,7 +909,7 @@ class Upload extends Component {
                 onClick={this.triggerFrontImage}
                 type="button"
               >
-                Let&apos;s start
+                撮影を開始する
               </button>
 
               <button
@@ -919,7 +919,7 @@ class Upload extends Component {
                 onClick={this.triggerSideImage}
                 type="button"
               >
-                Let&apos;s start
+                撮影を開始する
               </button>
             </div>
           </Fragment>

@@ -172,7 +172,7 @@ class Email extends Component {
           <Stepper steps="9" current="1" />
 
           <div className="email__control screen__control">
-            <h3 className="screen__label">Enter your email</h3>
+            <h3 className="screen__label">Eメールアドレス</h3>
             <input
               className={classNames('input', { 'input--invalid': !isEmailValid })}
               onBlur={!isMobile ? this.changeEmail : false}
@@ -192,7 +192,7 @@ class Email extends Component {
             token={token}
             changeAgreeState={this.changeAgree}
           />
-          <button className="button" onClick={this.onNextScreen} type="button" disabled={buttonDisabled}>Next</button>
+          <button className="button" onClick={this.onNextScreen} type="button" disabled={buttonDisabled}>次へ</button>
         </div>
       </div>
     );
